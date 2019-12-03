@@ -1,0 +1,5 @@
+hautelook_alice:
+    fixtures_path: 'src/DataFixtures/Fixtures'
+    root_dirs:
+        - '%kernel.root_dir%'
+        - '%kernel.project_dir%'

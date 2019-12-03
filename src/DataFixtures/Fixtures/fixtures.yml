@@ -1,0 +1,15 @@
+App\Entity\Category:
+    category_{1..20}:
+        name: <sentence()>
+        created_at: <dateTimeBetween("-300 days", "-200 days")>
+        updated_at: 50%? <dateTimeBetween("-200 days", "-100 days")>
+        deleted_at: 20%? <dateTimeBetween("-100 days", "-1 days")>
+
+App\Entity\Article:
+    article_{1..100}:
+        title: <sentence()>
+        text: <text(1000)>
+        categories: '3x @category_*'
+        created_at: <dateTimeBetween("-300 days", "-200 days")>
+        updated_at: 50%? <dateTimeBetween("-200 days", "-100 days")>
+        deleted_at: 20%? <dateTimeBetween("-100 days", "-1 days")>
