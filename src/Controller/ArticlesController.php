@@ -50,6 +50,60 @@ class ArticlesController extends AbstractController implements UndeletableInterf
     }
 
     /**
+     * @Security("is_granted('ROLE_ADMIN')")
+     * @Rest\View()
+     * @Rest\Post("/articles/{article}/categories", name="post_article_category")
+     * @ParamConverter("category", converter="fos_rest.request_body")
+     *
+     * @param Article $article
+     * @param Category $category
+     * @param ConstraintViolationListInterface $validationErrors
+     * @return []|Category
+     */
+    public function addArticleCategory(Article $article, Category $category, ConstraintViolationListInterface $validationErrors)
+    {
+        if (count($validationErrors) > 0) {
+            throw new ValidationException($validationErrors);
+        }
+
+
+        $article->addCategory($category);
+
+        $manager = $this->getDoctrine()->getManager();
+        $manager->persist($article);
+        $manager->flush();
+
+        return $article;
+    }
+
+    /**
+     * @Security("is_granted('ROLE_ADMIN')")
+     * @Rest\View()
+     * @Rest\Delete("/articles/{article}/categories", name="delete_article_category")
+     * @ParamConverter("category", converter="fos_rest.request_body")
+     *
+     * @param Article $article
+     * @param Category $category
+     * @param ConstraintViolationListInterface $validationErrors
+     * @return []|Category
+     */
+    public function deleteArticleCategory(Article $article, Category $category, ConstraintViolationListInterface $validationErrors)
+    {
+        if (count($validationErrors) > 0) {
+            throw new ValidationException($validationErrors);
+        }
+
+
+        $article->removeCategory($category);
+
+        $manager = $this->getDoctrine()->getManager();
+        $manager->persist($article);
+        $manager->flush();
+
+        return $article;
+    }
+
+    /**
      * Get all active articles
      *
      * @Rest\View()
@@ -164,60 +218,6 @@ class ArticlesController extends AbstractController implements UndeletableInterf
         $manager->flush();
 
         return ['success' => true];
-    }
-
-    /**
-     * @Security("is_granted('ROLE_ADMIN')")
-     * @Rest\View()
-     * @Rest\Post("/articles/{article}/categories", name="post_article_category")
-     * @ParamConverter("category", converter="fos_rest.request_body")
-     *
-     * @param Article $article
-     * @param Category $category
-     * @param ConstraintViolationListInterface $validationErrors
-     * @return []|Category
-     */
-    public function addArticleCategory(Article $article, Category $category, ConstraintViolationListInterface $validationErrors)
-    {
-        if (count($validationErrors) > 0) {
-            throw new ValidationException($validationErrors);
-        }
-
-
-        $article->addCategory($category);
-
-        $manager = $this->getDoctrine()->getManager();
-        $manager->persist($article);
-        $manager->flush();
-
-        return $article;
-    }
-
-    /**
-     * @Security("is_granted('ROLE_ADMIN')")
-     * @Rest\View()
-     * @Rest\Delete("/articles/{article}/categories", name="post_article_category")
-     * @ParamConverter("category", converter="fos_rest.request_body")
-     *
-     * @param Article $article
-     * @param Category $category
-     * @param ConstraintViolationListInterface $validationErrors
-     * @return []|Category
-     */
-    public function deleteArticleCategory(Article $article, Category $category, ConstraintViolationListInterface $validationErrors)
-    {
-        if (count($validationErrors) > 0) {
-            throw new ValidationException($validationErrors);
-        }
-
-
-        $article->removeCategory($category);
-
-        $manager = $this->getDoctrine()->getManager();
-        $manager->persist($article);
-        $manager->flush();
-
-        return $article;
     }
 
     /**
