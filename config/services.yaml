@@ -35,6 +35,8 @@ services:
 
     Predis\Client:
         autowire: true
+        arguments:
+            - '%env(REDIS_URL)%'
 
     jms_serializer.object_constructor:
         alias: jms_serializer.doctrine_object_constructor
