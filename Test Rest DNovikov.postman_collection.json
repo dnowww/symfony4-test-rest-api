@@ -1,0 +1,1674 @@
+{
+	"info": {
+		"_postman_id": "f82423a9-4436-4136-a520-2f01b1fb71a9",
+		"name": "Test Rest DNovikov",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Articles Read",
+			"item": [
+				{
+					"name": "Get All Active Articles",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}rest/api/articles/",
+							"host": [
+								"{{URL}}rest"
+							],
+							"path": [
+								"api",
+								"articles",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Deleted Articles",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}rest/api/articles/deleted",
+							"host": [
+								"{{URL}}rest"
+							],
+							"path": [
+								"api",
+								"articles",
+								"deleted"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Articles Sorted By `id` asc",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}rest/api/articles?sortBy=id+asc",
+							"host": [
+								"{{URL}}rest"
+							],
+							"path": [
+								"api",
+								"articles"
+							],
+							"query": [
+								{
+									"key": "sortBy",
+									"value": "id+asc"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Articles Sorted By `id` desc",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}rest/api/articles?sortBy=id+desc",
+							"host": [
+								"{{URL}}rest"
+							],
+							"path": [
+								"api",
+								"articles"
+							],
+							"query": [
+								{
+									"key": "sortBy",
+									"value": "id+desc"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Articles Sorted By `id`, page 2",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}rest/api/articles?sortBy=id+asc&page=2",
+							"host": [
+								"{{URL}}rest"
+							],
+							"path": [
+								"api",
+								"articles"
+							],
+							"query": [
+								{
+									"key": "sortBy",
+									"value": "id+asc"
+								},
+								{
+									"key": "page",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Articles Sorted By `title` asc, `id` asc",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}rest/api/articles?sortBy=title+asc,id+asc",
+							"host": [
+								"{{URL}}rest"
+							],
+							"path": [
+								"api",
+								"articles"
+							],
+							"query": [
+								{
+									"key": "sortBy",
+									"value": "title+asc,id+asc"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Articles Sorted By `title` desc, `id` asc",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}rest/api/articles?sortBy=title+desc,id+asc",
+							"host": [
+								"{{URL}}rest"
+							],
+							"path": [
+								"api",
+								"articles"
+							],
+							"query": [
+								{
+									"key": "sortBy",
+									"value": "title+desc,id+asc"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Articles Sorted By `created_at` desc",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}rest/api/articles?sortBy=created_at+desc",
+							"host": [
+								"{{URL}}rest"
+							],
+							"path": [
+								"api",
+								"articles"
+							],
+							"query": [
+								{
+									"key": "sortBy",
+									"value": "created_at+desc"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Articles Sorted By `updated_at` desc",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}rest/api/articles?sortBy=updated_at+desc",
+							"host": [
+								"{{URL}}rest"
+							],
+							"path": [
+								"api",
+								"articles"
+							],
+							"query": [
+								{
+									"key": "sortBy",
+									"value": "updated_at+desc"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search Articles By `title`",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}rest/api/articles/?title=nihil",
+							"host": [
+								"{{URL}}rest"
+							],
+							"path": [
+								"api",
+								"articles",
+								""
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": "nihil"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search Articles By `title` Sorted By `updated_at` desc",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}rest/api/articles/?title=nihil&sortBy=updated_at+desc",
+							"host": [
+								"{{URL}}rest"
+							],
+							"path": [
+								"api",
+								"articles",
+								""
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": "nihil"
+								},
+								{
+									"key": "sortBy",
+									"value": "updated_at+desc"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search Articles By `category`",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}rest/api/articles/?category=21",
+							"host": [
+								"{{URL}}rest"
+							],
+							"path": [
+								"api",
+								"articles",
+								""
+							],
+							"query": [
+								{
+									"key": "category",
+									"value": "21"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search Articles By `category` & `title`",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}rest/api/articles/?category=21&title=nihil",
+							"host": [
+								"{{URL}}rest"
+							],
+							"path": [
+								"api",
+								"articles",
+								""
+							],
+							"query": [
+								{
+									"key": "category",
+									"value": "21"
+								},
+								{
+									"key": "title",
+									"value": "nihil"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search Articles By `text`",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}rest/api/articles/?text=nihil",
+							"host": [
+								"{{URL}}rest"
+							],
+							"path": [
+								"api",
+								"articles",
+								""
+							],
+							"query": [
+								{
+									"key": "text",
+									"value": "nihil"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search Articles By `category` & `text`",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}rest/api/articles/?category=21&text=nihil",
+							"host": [
+								"{{URL}}rest"
+							],
+							"path": [
+								"api",
+								"articles",
+								""
+							],
+							"query": [
+								{
+									"key": "category",
+									"value": "21"
+								},
+								{
+									"key": "text",
+									"value": "nihil"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get One Article By Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{URL}}rest/api/articles/311",
+							"host": [
+								"{{URL}}rest"
+							],
+							"path": [
+								"api",
+								"articles",
+								"311"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Article Categories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}rest/api/articles/296/categories",
+							"host": [
+								"{{URL}}rest"
+							],
+							"path": [
+								"api",
+								"articles",
+								"296",
+								"categories"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Get Token (auto assigned to Env value used in writable requests)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "7ddfdf33-7fe8-4e67-908d-dfa6ed70694a",
+								"exec": [
+									"var data = pm.response.json();\r",
+									"pm.environment.set(\"Token\", data.token);\r",
+									"pm.variables.set(\"Token\", data.token);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "Admin!12345",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "PHP_AUTH_USER",
+								"value": "admin",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "PHP_AUTH_PW",
+								"value": "Admin!12345",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}rest/api/tokens",
+							"host": [
+								"{{URL}}rest"
+							],
+							"path": [
+								"api",
+								"tokens"
+							]
+						},
+						"description": "Get Auth Token"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Articles Write  (Token Needed, Run \"Get Token\" First)",
+			"item": [
+				{
+					"name": "Add New Article",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Auth",
+								"type": "text",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE1NzUzMjI1MjksInVzZXJuYW1lIjoiYWRtaW4iLCJleHAiOjE1NzUzMjYxMjl9.OEiYjv4qeCsh7TpWygk5xySaxzx5kVZnqEYML7Pw-j5OU_Tk_8jSuYIB9MZ7JbH1_UX0FkmrzNcWGqDPhsYKuOI5O2Jhg-OP_w3-nGLpqMf97Eanc1P1OaKj6YaCPePA9zbBN9NAtijA7u25KCY_oyISpSKnt1psrZnQPl42S-jgzmi_BhmOi_9J4rTEwalT_q5_8_WlVGtZLZW_hPedRkuUqbIVNmYAwPuye67udra_8-HmI-Dz_Gv1I7AtVu4GSSHoNCMJZhfeUMEKNGXwg2YLQKrYv6sfGc_i1eQGgyeqT9jWrLs7CjzKJJm8xdd01U_ftS4XlamLUbLJ7WlnilJtcftG8oC8si4mMuVZVOYldj29n6Fuo9U-THgsxP6KuaqDRL2pqVD6SEF5CCvDrDzOGregHpFP2-iGx2rKAYIZMNCCf5K7A2kdbr6d8NQJUaTdhpnpst3SGCb_6WE8BByqpqW-Fwf6TSdaCFHX9IuJIiRihSamtHbqEIx0DdTi83aDWt82-AjsW6z6LHp2zLC-26sdv_vH-ug8lM27dADmwM3IdkBD6F06HSB3TrNQQiNYmHeIFyJLbLFwV25ytiKc3lSFf0UofB5DsazXAudVc0fGWVrdJB7ehSIBvyZ4ETGYX1x2u8gFNkbaa3vF1k5XtOYjjvBXj5uDa4k7F2A",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"New Article Title\",\n    \"text\": \"New Article Text. New Article Text. New Article Text. New Article Text. New Article Text.\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}rest/api/articles",
+							"host": [
+								"{{URL}}rest"
+							],
+							"path": [
+								"api",
+								"articles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Category To Article",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Auth",
+								"type": "text",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE1NzUzMjI1MjksInVzZXJuYW1lIjoiYWRtaW4iLCJleHAiOjE1NzUzMjYxMjl9.OEiYjv4qeCsh7TpWygk5xySaxzx5kVZnqEYML7Pw-j5OU_Tk_8jSuYIB9MZ7JbH1_UX0FkmrzNcWGqDPhsYKuOI5O2Jhg-OP_w3-nGLpqMf97Eanc1P1OaKj6YaCPePA9zbBN9NAtijA7u25KCY_oyISpSKnt1psrZnQPl42S-jgzmi_BhmOi_9J4rTEwalT_q5_8_WlVGtZLZW_hPedRkuUqbIVNmYAwPuye67udra_8-HmI-Dz_Gv1I7AtVu4GSSHoNCMJZhfeUMEKNGXwg2YLQKrYv6sfGc_i1eQGgyeqT9jWrLs7CjzKJJm8xdd01U_ftS4XlamLUbLJ7WlnilJtcftG8oC8si4mMuVZVOYldj29n6Fuo9U-THgsxP6KuaqDRL2pqVD6SEF5CCvDrDzOGregHpFP2-iGx2rKAYIZMNCCf5K7A2kdbr6d8NQJUaTdhpnpst3SGCb_6WE8BByqpqW-Fwf6TSdaCFHX9IuJIiRihSamtHbqEIx0DdTi83aDWt82-AjsW6z6LHp2zLC-26sdv_vH-ug8lM27dADmwM3IdkBD6F06HSB3TrNQQiNYmHeIFyJLbLFwV25ytiKc3lSFf0UofB5DsazXAudVc0fGWVrdJB7ehSIBvyZ4ETGYX1x2u8gFNkbaa3vF1k5XtOYjjvBXj5uDa4k7F2A",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 22\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}rest/api/articles/208/categories",
+							"host": [
+								"{{URL}}rest"
+							],
+							"path": [
+								"api",
+								"articles",
+								"208",
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Category From Article",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Auth",
+								"type": "text",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE1NzUzMjI1MjksInVzZXJuYW1lIjoiYWRtaW4iLCJleHAiOjE1NzUzMjYxMjl9.OEiYjv4qeCsh7TpWygk5xySaxzx5kVZnqEYML7Pw-j5OU_Tk_8jSuYIB9MZ7JbH1_UX0FkmrzNcWGqDPhsYKuOI5O2Jhg-OP_w3-nGLpqMf97Eanc1P1OaKj6YaCPePA9zbBN9NAtijA7u25KCY_oyISpSKnt1psrZnQPl42S-jgzmi_BhmOi_9J4rTEwalT_q5_8_WlVGtZLZW_hPedRkuUqbIVNmYAwPuye67udra_8-HmI-Dz_Gv1I7AtVu4GSSHoNCMJZhfeUMEKNGXwg2YLQKrYv6sfGc_i1eQGgyeqT9jWrLs7CjzKJJm8xdd01U_ftS4XlamLUbLJ7WlnilJtcftG8oC8si4mMuVZVOYldj29n6Fuo9U-THgsxP6KuaqDRL2pqVD6SEF5CCvDrDzOGregHpFP2-iGx2rKAYIZMNCCf5K7A2kdbr6d8NQJUaTdhpnpst3SGCb_6WE8BByqpqW-Fwf6TSdaCFHX9IuJIiRihSamtHbqEIx0DdTi83aDWt82-AjsW6z6LHp2zLC-26sdv_vH-ug8lM27dADmwM3IdkBD6F06HSB3TrNQQiNYmHeIFyJLbLFwV25ytiKc3lSFf0UofB5DsazXAudVc0fGWVrdJB7ehSIBvyZ4ETGYX1x2u8gFNkbaa3vF1k5XtOYjjvBXj5uDa4k7F2A",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 21\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}rest/api/articles/208/categories",
+							"host": [
+								"{{URL}}rest"
+							],
+							"path": [
+								"api",
+								"articles",
+								"208",
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Existing Article",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Auth",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE1NzUzMjI1MjksInVzZXJuYW1lIjoiYWRtaW4iLCJleHAiOjE1NzUzMjYxMjl9.OEiYjv4qeCsh7TpWygk5xySaxzx5kVZnqEYML7Pw-j5OU_Tk_8jSuYIB9MZ7JbH1_UX0FkmrzNcWGqDPhsYKuOI5O2Jhg-OP_w3-nGLpqMf97Eanc1P1OaKj6YaCPePA9zbBN9NAtijA7u25KCY_oyISpSKnt1psrZnQPl42S-jgzmi_BhmOi_9J4rTEwalT_q5_8_WlVGtZLZW_hPedRkuUqbIVNmYAwPuye67udra_8-HmI-Dz_Gv1I7AtVu4GSSHoNCMJZhfeUMEKNGXwg2YLQKrYv6sfGc_i1eQGgyeqT9jWrLs7CjzKJJm8xdd01U_ftS4XlamLUbLJ7WlnilJtcftG8oC8si4mMuVZVOYldj29n6Fuo9U-THgsxP6KuaqDRL2pqVD6SEF5CCvDrDzOGregHpFP2-iGx2rKAYIZMNCCf5K7A2kdbr6d8NQJUaTdhpnpst3SGCb_6WE8BByqpqW-Fwf6TSdaCFHX9IuJIiRihSamtHbqEIx0DdTi83aDWt82-AjsW6z6LHp2zLC-26sdv_vH-ug8lM27dADmwM3IdkBD6F06HSB3TrNQQiNYmHeIFyJLbLFwV25ytiKc3lSFf0UofB5DsazXAudVc0fGWVrdJB7ehSIBvyZ4ETGYX1x2u8gFNkbaa3vF1k5XtOYjjvBXj5uDa4k7F2A",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"New Test Title\",\r\n    \"text\": \"New Test Text\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}rest/api/articles/311",
+							"host": [
+								"{{URL}}rest"
+							],
+							"path": [
+								"api",
+								"articles",
+								"311"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Article (actually set `deleted_at`)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "XDEBUG_SESSION",
+								"value": "1",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{URL}}rest/api/articles/208",
+							"host": [
+								"{{URL}}rest"
+							],
+							"path": [
+								"api",
+								"articles",
+								"208"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Undelete Deleted Article",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Auth",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE1NzUzMjI1MjksInVzZXJuYW1lIjoiYWRtaW4iLCJleHAiOjE1NzUzMjYxMjl9.OEiYjv4qeCsh7TpWygk5xySaxzx5kVZnqEYML7Pw-j5OU_Tk_8jSuYIB9MZ7JbH1_UX0FkmrzNcWGqDPhsYKuOI5O2Jhg-OP_w3-nGLpqMf97Eanc1P1OaKj6YaCPePA9zbBN9NAtijA7u25KCY_oyISpSKnt1psrZnQPl42S-jgzmi_BhmOi_9J4rTEwalT_q5_8_WlVGtZLZW_hPedRkuUqbIVNmYAwPuye67udra_8-HmI-Dz_Gv1I7AtVu4GSSHoNCMJZhfeUMEKNGXwg2YLQKrYv6sfGc_i1eQGgyeqT9jWrLs7CjzKJJm8xdd01U_ftS4XlamLUbLJ7WlnilJtcftG8oC8si4mMuVZVOYldj29n6Fuo9U-THgsxP6KuaqDRL2pqVD6SEF5CCvDrDzOGregHpFP2-iGx2rKAYIZMNCCf5K7A2kdbr6d8NQJUaTdhpnpst3SGCb_6WE8BByqpqW-Fwf6TSdaCFHX9IuJIiRihSamtHbqEIx0DdTi83aDWt82-AjsW6z6LHp2zLC-26sdv_vH-ug8lM27dADmwM3IdkBD6F06HSB3TrNQQiNYmHeIFyJLbLFwV25ytiKc3lSFf0UofB5DsazXAudVc0fGWVrdJB7ehSIBvyZ4ETGYX1x2u8gFNkbaa3vF1k5XtOYjjvBXj5uDa4k7F2A",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"deleted_at\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}rest/api/articles/208",
+							"host": [
+								"{{URL}}rest"
+							],
+							"path": [
+								"api",
+								"articles",
+								"208"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "b84fc63a-a50a-4293-9eeb-38d257127b21",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "67116512-6428-4702-840c-298846e99c08",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Categories Read",
+			"item": [
+				{
+					"name": "Get All Active Categories",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Auth",
+								"type": "text",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE1NzUzMjI1MjksInVzZXJuYW1lIjoiYWRtaW4iLCJleHAiOjE1NzUzMjYxMjl9.OEiYjv4qeCsh7TpWygk5xySaxzx5kVZnqEYML7Pw-j5OU_Tk_8jSuYIB9MZ7JbH1_UX0FkmrzNcWGqDPhsYKuOI5O2Jhg-OP_w3-nGLpqMf97Eanc1P1OaKj6YaCPePA9zbBN9NAtijA7u25KCY_oyISpSKnt1psrZnQPl42S-jgzmi_BhmOi_9J4rTEwalT_q5_8_WlVGtZLZW_hPedRkuUqbIVNmYAwPuye67udra_8-HmI-Dz_Gv1I7AtVu4GSSHoNCMJZhfeUMEKNGXwg2YLQKrYv6sfGc_i1eQGgyeqT9jWrLs7CjzKJJm8xdd01U_ftS4XlamLUbLJ7WlnilJtcftG8oC8si4mMuVZVOYldj29n6Fuo9U-THgsxP6KuaqDRL2pqVD6SEF5CCvDrDzOGregHpFP2-iGx2rKAYIZMNCCf5K7A2kdbr6d8NQJUaTdhpnpst3SGCb_6WE8BByqpqW-Fwf6TSdaCFHX9IuJIiRihSamtHbqEIx0DdTi83aDWt82-AjsW6z6LHp2zLC-26sdv_vH-ug8lM27dADmwM3IdkBD6F06HSB3TrNQQiNYmHeIFyJLbLFwV25ytiKc3lSFf0UofB5DsazXAudVc0fGWVrdJB7ehSIBvyZ4ETGYX1x2u8gFNkbaa3vF1k5XtOYjjvBXj5uDa4k7F2A",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}rest/api/categories",
+							"host": [
+								"{{URL}}rest"
+							],
+							"path": [
+								"api",
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Deleted Categories",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Auth",
+								"type": "text",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE1NzUzMjI1MjksInVzZXJuYW1lIjoiYWRtaW4iLCJleHAiOjE1NzUzMjYxMjl9.OEiYjv4qeCsh7TpWygk5xySaxzx5kVZnqEYML7Pw-j5OU_Tk_8jSuYIB9MZ7JbH1_UX0FkmrzNcWGqDPhsYKuOI5O2Jhg-OP_w3-nGLpqMf97Eanc1P1OaKj6YaCPePA9zbBN9NAtijA7u25KCY_oyISpSKnt1psrZnQPl42S-jgzmi_BhmOi_9J4rTEwalT_q5_8_WlVGtZLZW_hPedRkuUqbIVNmYAwPuye67udra_8-HmI-Dz_Gv1I7AtVu4GSSHoNCMJZhfeUMEKNGXwg2YLQKrYv6sfGc_i1eQGgyeqT9jWrLs7CjzKJJm8xdd01U_ftS4XlamLUbLJ7WlnilJtcftG8oC8si4mMuVZVOYldj29n6Fuo9U-THgsxP6KuaqDRL2pqVD6SEF5CCvDrDzOGregHpFP2-iGx2rKAYIZMNCCf5K7A2kdbr6d8NQJUaTdhpnpst3SGCb_6WE8BByqpqW-Fwf6TSdaCFHX9IuJIiRihSamtHbqEIx0DdTi83aDWt82-AjsW6z6LHp2zLC-26sdv_vH-ug8lM27dADmwM3IdkBD6F06HSB3TrNQQiNYmHeIFyJLbLFwV25ytiKc3lSFf0UofB5DsazXAudVc0fGWVrdJB7ehSIBvyZ4ETGYX1x2u8gFNkbaa3vF1k5XtOYjjvBXj5uDa4k7F2A",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}rest/api/categories/deleted",
+							"host": [
+								"{{URL}}rest"
+							],
+							"path": [
+								"api",
+								"categories",
+								"deleted"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Categories Sorted By `id` asc",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Auth",
+								"type": "text",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE1NzUzMjI1MjksInVzZXJuYW1lIjoiYWRtaW4iLCJleHAiOjE1NzUzMjYxMjl9.OEiYjv4qeCsh7TpWygk5xySaxzx5kVZnqEYML7Pw-j5OU_Tk_8jSuYIB9MZ7JbH1_UX0FkmrzNcWGqDPhsYKuOI5O2Jhg-OP_w3-nGLpqMf97Eanc1P1OaKj6YaCPePA9zbBN9NAtijA7u25KCY_oyISpSKnt1psrZnQPl42S-jgzmi_BhmOi_9J4rTEwalT_q5_8_WlVGtZLZW_hPedRkuUqbIVNmYAwPuye67udra_8-HmI-Dz_Gv1I7AtVu4GSSHoNCMJZhfeUMEKNGXwg2YLQKrYv6sfGc_i1eQGgyeqT9jWrLs7CjzKJJm8xdd01U_ftS4XlamLUbLJ7WlnilJtcftG8oC8si4mMuVZVOYldj29n6Fuo9U-THgsxP6KuaqDRL2pqVD6SEF5CCvDrDzOGregHpFP2-iGx2rKAYIZMNCCf5K7A2kdbr6d8NQJUaTdhpnpst3SGCb_6WE8BByqpqW-Fwf6TSdaCFHX9IuJIiRihSamtHbqEIx0DdTi83aDWt82-AjsW6z6LHp2zLC-26sdv_vH-ug8lM27dADmwM3IdkBD6F06HSB3TrNQQiNYmHeIFyJLbLFwV25ytiKc3lSFf0UofB5DsazXAudVc0fGWVrdJB7ehSIBvyZ4ETGYX1x2u8gFNkbaa3vF1k5XtOYjjvBXj5uDa4k7F2A",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}rest/api/categories?sortBy=id+asc",
+							"host": [
+								"{{URL}}rest"
+							],
+							"path": [
+								"api",
+								"categories"
+							],
+							"query": [
+								{
+									"key": "sortBy",
+									"value": "id+asc"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Categories Sorted By `id` desc",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Auth",
+								"type": "text",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE1NzUzMjI1MjksInVzZXJuYW1lIjoiYWRtaW4iLCJleHAiOjE1NzUzMjYxMjl9.OEiYjv4qeCsh7TpWygk5xySaxzx5kVZnqEYML7Pw-j5OU_Tk_8jSuYIB9MZ7JbH1_UX0FkmrzNcWGqDPhsYKuOI5O2Jhg-OP_w3-nGLpqMf97Eanc1P1OaKj6YaCPePA9zbBN9NAtijA7u25KCY_oyISpSKnt1psrZnQPl42S-jgzmi_BhmOi_9J4rTEwalT_q5_8_WlVGtZLZW_hPedRkuUqbIVNmYAwPuye67udra_8-HmI-Dz_Gv1I7AtVu4GSSHoNCMJZhfeUMEKNGXwg2YLQKrYv6sfGc_i1eQGgyeqT9jWrLs7CjzKJJm8xdd01U_ftS4XlamLUbLJ7WlnilJtcftG8oC8si4mMuVZVOYldj29n6Fuo9U-THgsxP6KuaqDRL2pqVD6SEF5CCvDrDzOGregHpFP2-iGx2rKAYIZMNCCf5K7A2kdbr6d8NQJUaTdhpnpst3SGCb_6WE8BByqpqW-Fwf6TSdaCFHX9IuJIiRihSamtHbqEIx0DdTi83aDWt82-AjsW6z6LHp2zLC-26sdv_vH-ug8lM27dADmwM3IdkBD6F06HSB3TrNQQiNYmHeIFyJLbLFwV25ytiKc3lSFf0UofB5DsazXAudVc0fGWVrdJB7ehSIBvyZ4ETGYX1x2u8gFNkbaa3vF1k5XtOYjjvBXj5uDa4k7F2A",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}rest/api/categories?sortBy=id+desc",
+							"host": [
+								"{{URL}}rest"
+							],
+							"path": [
+								"api",
+								"categories"
+							],
+							"query": [
+								{
+									"key": "sortBy",
+									"value": "id+desc"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Categories Sorted By `created_at` desc",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Auth",
+								"type": "text",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE1NzUzMjI1MjksInVzZXJuYW1lIjoiYWRtaW4iLCJleHAiOjE1NzUzMjYxMjl9.OEiYjv4qeCsh7TpWygk5xySaxzx5kVZnqEYML7Pw-j5OU_Tk_8jSuYIB9MZ7JbH1_UX0FkmrzNcWGqDPhsYKuOI5O2Jhg-OP_w3-nGLpqMf97Eanc1P1OaKj6YaCPePA9zbBN9NAtijA7u25KCY_oyISpSKnt1psrZnQPl42S-jgzmi_BhmOi_9J4rTEwalT_q5_8_WlVGtZLZW_hPedRkuUqbIVNmYAwPuye67udra_8-HmI-Dz_Gv1I7AtVu4GSSHoNCMJZhfeUMEKNGXwg2YLQKrYv6sfGc_i1eQGgyeqT9jWrLs7CjzKJJm8xdd01U_ftS4XlamLUbLJ7WlnilJtcftG8oC8si4mMuVZVOYldj29n6Fuo9U-THgsxP6KuaqDRL2pqVD6SEF5CCvDrDzOGregHpFP2-iGx2rKAYIZMNCCf5K7A2kdbr6d8NQJUaTdhpnpst3SGCb_6WE8BByqpqW-Fwf6TSdaCFHX9IuJIiRihSamtHbqEIx0DdTi83aDWt82-AjsW6z6LHp2zLC-26sdv_vH-ug8lM27dADmwM3IdkBD6F06HSB3TrNQQiNYmHeIFyJLbLFwV25ytiKc3lSFf0UofB5DsazXAudVc0fGWVrdJB7ehSIBvyZ4ETGYX1x2u8gFNkbaa3vF1k5XtOYjjvBXj5uDa4k7F2A",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}rest/api/categories?sortBy=created_at+desc",
+							"host": [
+								"{{URL}}rest"
+							],
+							"path": [
+								"api",
+								"categories"
+							],
+							"query": [
+								{
+									"key": "sortBy",
+									"value": "created_at+desc"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Categories Sorted By `updated_at` desc",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Auth",
+								"type": "text",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE1NzUzMjI1MjksInVzZXJuYW1lIjoiYWRtaW4iLCJleHAiOjE1NzUzMjYxMjl9.OEiYjv4qeCsh7TpWygk5xySaxzx5kVZnqEYML7Pw-j5OU_Tk_8jSuYIB9MZ7JbH1_UX0FkmrzNcWGqDPhsYKuOI5O2Jhg-OP_w3-nGLpqMf97Eanc1P1OaKj6YaCPePA9zbBN9NAtijA7u25KCY_oyISpSKnt1psrZnQPl42S-jgzmi_BhmOi_9J4rTEwalT_q5_8_WlVGtZLZW_hPedRkuUqbIVNmYAwPuye67udra_8-HmI-Dz_Gv1I7AtVu4GSSHoNCMJZhfeUMEKNGXwg2YLQKrYv6sfGc_i1eQGgyeqT9jWrLs7CjzKJJm8xdd01U_ftS4XlamLUbLJ7WlnilJtcftG8oC8si4mMuVZVOYldj29n6Fuo9U-THgsxP6KuaqDRL2pqVD6SEF5CCvDrDzOGregHpFP2-iGx2rKAYIZMNCCf5K7A2kdbr6d8NQJUaTdhpnpst3SGCb_6WE8BByqpqW-Fwf6TSdaCFHX9IuJIiRihSamtHbqEIx0DdTi83aDWt82-AjsW6z6LHp2zLC-26sdv_vH-ug8lM27dADmwM3IdkBD6F06HSB3TrNQQiNYmHeIFyJLbLFwV25ytiKc3lSFf0UofB5DsazXAudVc0fGWVrdJB7ehSIBvyZ4ETGYX1x2u8gFNkbaa3vF1k5XtOYjjvBXj5uDa4k7F2A",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}rest/api/categories?sortBy=updated_at+desc",
+							"host": [
+								"{{URL}}rest"
+							],
+							"path": [
+								"api",
+								"categories"
+							],
+							"query": [
+								{
+									"key": "sortBy",
+									"value": "updated_at+desc"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search Categories By `name` Sorted By `updated_at` desc",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Auth",
+								"type": "text",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE1NzUzMjI1MjksInVzZXJuYW1lIjoiYWRtaW4iLCJleHAiOjE1NzUzMjYxMjl9.OEiYjv4qeCsh7TpWygk5xySaxzx5kVZnqEYML7Pw-j5OU_Tk_8jSuYIB9MZ7JbH1_UX0FkmrzNcWGqDPhsYKuOI5O2Jhg-OP_w3-nGLpqMf97Eanc1P1OaKj6YaCPePA9zbBN9NAtijA7u25KCY_oyISpSKnt1psrZnQPl42S-jgzmi_BhmOi_9J4rTEwalT_q5_8_WlVGtZLZW_hPedRkuUqbIVNmYAwPuye67udra_8-HmI-Dz_Gv1I7AtVu4GSSHoNCMJZhfeUMEKNGXwg2YLQKrYv6sfGc_i1eQGgyeqT9jWrLs7CjzKJJm8xdd01U_ftS4XlamLUbLJ7WlnilJtcftG8oC8si4mMuVZVOYldj29n6Fuo9U-THgsxP6KuaqDRL2pqVD6SEF5CCvDrDzOGregHpFP2-iGx2rKAYIZMNCCf5K7A2kdbr6d8NQJUaTdhpnpst3SGCb_6WE8BByqpqW-Fwf6TSdaCFHX9IuJIiRihSamtHbqEIx0DdTi83aDWt82-AjsW6z6LHp2zLC-26sdv_vH-ug8lM27dADmwM3IdkBD6F06HSB3TrNQQiNYmHeIFyJLbLFwV25ytiKc3lSFf0UofB5DsazXAudVc0fGWVrdJB7ehSIBvyZ4ETGYX1x2u8gFNkbaa3vF1k5XtOYjjvBXj5uDa4k7F2A",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}rest/api/categories?name=sed&sortBy=updated_at+desc",
+							"host": [
+								"{{URL}}rest"
+							],
+							"path": [
+								"api",
+								"categories"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "sed"
+								},
+								{
+									"key": "sortBy",
+									"value": "updated_at+desc"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search Categories By `articles`",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Auth",
+								"type": "text",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE1NzUzMjI1MjksInVzZXJuYW1lIjoiYWRtaW4iLCJleHAiOjE1NzUzMjYxMjl9.OEiYjv4qeCsh7TpWygk5xySaxzx5kVZnqEYML7Pw-j5OU_Tk_8jSuYIB9MZ7JbH1_UX0FkmrzNcWGqDPhsYKuOI5O2Jhg-OP_w3-nGLpqMf97Eanc1P1OaKj6YaCPePA9zbBN9NAtijA7u25KCY_oyISpSKnt1psrZnQPl42S-jgzmi_BhmOi_9J4rTEwalT_q5_8_WlVGtZLZW_hPedRkuUqbIVNmYAwPuye67udra_8-HmI-Dz_Gv1I7AtVu4GSSHoNCMJZhfeUMEKNGXwg2YLQKrYv6sfGc_i1eQGgyeqT9jWrLs7CjzKJJm8xdd01U_ftS4XlamLUbLJ7WlnilJtcftG8oC8si4mMuVZVOYldj29n6Fuo9U-THgsxP6KuaqDRL2pqVD6SEF5CCvDrDzOGregHpFP2-iGx2rKAYIZMNCCf5K7A2kdbr6d8NQJUaTdhpnpst3SGCb_6WE8BByqpqW-Fwf6TSdaCFHX9IuJIiRihSamtHbqEIx0DdTi83aDWt82-AjsW6z6LHp2zLC-26sdv_vH-ug8lM27dADmwM3IdkBD6F06HSB3TrNQQiNYmHeIFyJLbLFwV25ytiKc3lSFf0UofB5DsazXAudVc0fGWVrdJB7ehSIBvyZ4ETGYX1x2u8gFNkbaa3vF1k5XtOYjjvBXj5uDa4k7F2A",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}rest/api/categories?articles=296",
+							"host": [
+								"{{URL}}rest"
+							],
+							"path": [
+								"api",
+								"categories"
+							],
+							"query": [
+								{
+									"key": "articles",
+									"value": "296"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get One Category By Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Auth",
+								"type": "text",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE1NzUzMjI1MjksInVzZXJuYW1lIjoiYWRtaW4iLCJleHAiOjE1NzUzMjYxMjl9.OEiYjv4qeCsh7TpWygk5xySaxzx5kVZnqEYML7Pw-j5OU_Tk_8jSuYIB9MZ7JbH1_UX0FkmrzNcWGqDPhsYKuOI5O2Jhg-OP_w3-nGLpqMf97Eanc1P1OaKj6YaCPePA9zbBN9NAtijA7u25KCY_oyISpSKnt1psrZnQPl42S-jgzmi_BhmOi_9J4rTEwalT_q5_8_WlVGtZLZW_hPedRkuUqbIVNmYAwPuye67udra_8-HmI-Dz_Gv1I7AtVu4GSSHoNCMJZhfeUMEKNGXwg2YLQKrYv6sfGc_i1eQGgyeqT9jWrLs7CjzKJJm8xdd01U_ftS4XlamLUbLJ7WlnilJtcftG8oC8si4mMuVZVOYldj29n6Fuo9U-THgsxP6KuaqDRL2pqVD6SEF5CCvDrDzOGregHpFP2-iGx2rKAYIZMNCCf5K7A2kdbr6d8NQJUaTdhpnpst3SGCb_6WE8BByqpqW-Fwf6TSdaCFHX9IuJIiRihSamtHbqEIx0DdTi83aDWt82-AjsW6z6LHp2zLC-26sdv_vH-ug8lM27dADmwM3IdkBD6F06HSB3TrNQQiNYmHeIFyJLbLFwV25ytiKc3lSFf0UofB5DsazXAudVc0fGWVrdJB7ehSIBvyZ4ETGYX1x2u8gFNkbaa3vF1k5XtOYjjvBXj5uDa4k7F2A",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}rest/api/categories/28",
+							"host": [
+								"{{URL}}rest"
+							],
+							"path": [
+								"api",
+								"categories",
+								"28"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Category Articles",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Auth",
+								"type": "text",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE1NzUzMjI1MjksInVzZXJuYW1lIjoiYWRtaW4iLCJleHAiOjE1NzUzMjYxMjl9.OEiYjv4qeCsh7TpWygk5xySaxzx5kVZnqEYML7Pw-j5OU_Tk_8jSuYIB9MZ7JbH1_UX0FkmrzNcWGqDPhsYKuOI5O2Jhg-OP_w3-nGLpqMf97Eanc1P1OaKj6YaCPePA9zbBN9NAtijA7u25KCY_oyISpSKnt1psrZnQPl42S-jgzmi_BhmOi_9J4rTEwalT_q5_8_WlVGtZLZW_hPedRkuUqbIVNmYAwPuye67udra_8-HmI-Dz_Gv1I7AtVu4GSSHoNCMJZhfeUMEKNGXwg2YLQKrYv6sfGc_i1eQGgyeqT9jWrLs7CjzKJJm8xdd01U_ftS4XlamLUbLJ7WlnilJtcftG8oC8si4mMuVZVOYldj29n6Fuo9U-THgsxP6KuaqDRL2pqVD6SEF5CCvDrDzOGregHpFP2-iGx2rKAYIZMNCCf5K7A2kdbr6d8NQJUaTdhpnpst3SGCb_6WE8BByqpqW-Fwf6TSdaCFHX9IuJIiRihSamtHbqEIx0DdTi83aDWt82-AjsW6z6LHp2zLC-26sdv_vH-ug8lM27dADmwM3IdkBD6F06HSB3TrNQQiNYmHeIFyJLbLFwV25ytiKc3lSFf0UofB5DsazXAudVc0fGWVrdJB7ehSIBvyZ4ETGYX1x2u8gFNkbaa3vF1k5XtOYjjvBXj5uDa4k7F2A",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}rest/api/categories/28/articles",
+							"host": [
+								"{{URL}}rest"
+							],
+							"path": [
+								"api",
+								"categories",
+								"28",
+								"articles"
+							]
+						},
+						"description": "@ToDo Add Pagination"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Categories Write",
+			"item": [
+				{
+					"name": "Add New Category",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Auth",
+								"type": "text",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE1NzUzMjI1MjksInVzZXJuYW1lIjoiYWRtaW4iLCJleHAiOjE1NzUzMjYxMjl9.OEiYjv4qeCsh7TpWygk5xySaxzx5kVZnqEYML7Pw-j5OU_Tk_8jSuYIB9MZ7JbH1_UX0FkmrzNcWGqDPhsYKuOI5O2Jhg-OP_w3-nGLpqMf97Eanc1P1OaKj6YaCPePA9zbBN9NAtijA7u25KCY_oyISpSKnt1psrZnQPl42S-jgzmi_BhmOi_9J4rTEwalT_q5_8_WlVGtZLZW_hPedRkuUqbIVNmYAwPuye67udra_8-HmI-Dz_Gv1I7AtVu4GSSHoNCMJZhfeUMEKNGXwg2YLQKrYv6sfGc_i1eQGgyeqT9jWrLs7CjzKJJm8xdd01U_ftS4XlamLUbLJ7WlnilJtcftG8oC8si4mMuVZVOYldj29n6Fuo9U-THgsxP6KuaqDRL2pqVD6SEF5CCvDrDzOGregHpFP2-iGx2rKAYIZMNCCf5K7A2kdbr6d8NQJUaTdhpnpst3SGCb_6WE8BByqpqW-Fwf6TSdaCFHX9IuJIiRihSamtHbqEIx0DdTi83aDWt82-AjsW6z6LHp2zLC-26sdv_vH-ug8lM27dADmwM3IdkBD6F06HSB3TrNQQiNYmHeIFyJLbLFwV25ytiKc3lSFf0UofB5DsazXAudVc0fGWVrdJB7ehSIBvyZ4ETGYX1x2u8gFNkbaa3vF1k5XtOYjjvBXj5uDa4k7F2A",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"New Category Title\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}rest/api/categories",
+							"host": [
+								"{{URL}}rest"
+							],
+							"path": [
+								"api",
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add  Article To Category",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Auth",
+								"type": "text",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE1NzUzMjI1MjksInVzZXJuYW1lIjoiYWRtaW4iLCJleHAiOjE1NzUzMjYxMjl9.OEiYjv4qeCsh7TpWygk5xySaxzx5kVZnqEYML7Pw-j5OU_Tk_8jSuYIB9MZ7JbH1_UX0FkmrzNcWGqDPhsYKuOI5O2Jhg-OP_w3-nGLpqMf97Eanc1P1OaKj6YaCPePA9zbBN9NAtijA7u25KCY_oyISpSKnt1psrZnQPl42S-jgzmi_BhmOi_9J4rTEwalT_q5_8_WlVGtZLZW_hPedRkuUqbIVNmYAwPuye67udra_8-HmI-Dz_Gv1I7AtVu4GSSHoNCMJZhfeUMEKNGXwg2YLQKrYv6sfGc_i1eQGgyeqT9jWrLs7CjzKJJm8xdd01U_ftS4XlamLUbLJ7WlnilJtcftG8oC8si4mMuVZVOYldj29n6Fuo9U-THgsxP6KuaqDRL2pqVD6SEF5CCvDrDzOGregHpFP2-iGx2rKAYIZMNCCf5K7A2kdbr6d8NQJUaTdhpnpst3SGCb_6WE8BByqpqW-Fwf6TSdaCFHX9IuJIiRihSamtHbqEIx0DdTi83aDWt82-AjsW6z6LHp2zLC-26sdv_vH-ug8lM27dADmwM3IdkBD6F06HSB3TrNQQiNYmHeIFyJLbLFwV25ytiKc3lSFf0UofB5DsazXAudVc0fGWVrdJB7ehSIBvyZ4ETGYX1x2u8gFNkbaa3vF1k5XtOYjjvBXj5uDa4k7F2A",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 201\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}rest/api/categories/22/articles",
+							"host": [
+								"{{URL}}rest"
+							],
+							"path": [
+								"api",
+								"categories",
+								"22",
+								"articles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Article From Category",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Auth",
+								"type": "text",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE1NzUzMjI1MjksInVzZXJuYW1lIjoiYWRtaW4iLCJleHAiOjE1NzUzMjYxMjl9.OEiYjv4qeCsh7TpWygk5xySaxzx5kVZnqEYML7Pw-j5OU_Tk_8jSuYIB9MZ7JbH1_UX0FkmrzNcWGqDPhsYKuOI5O2Jhg-OP_w3-nGLpqMf97Eanc1P1OaKj6YaCPePA9zbBN9NAtijA7u25KCY_oyISpSKnt1psrZnQPl42S-jgzmi_BhmOi_9J4rTEwalT_q5_8_WlVGtZLZW_hPedRkuUqbIVNmYAwPuye67udra_8-HmI-Dz_Gv1I7AtVu4GSSHoNCMJZhfeUMEKNGXwg2YLQKrYv6sfGc_i1eQGgyeqT9jWrLs7CjzKJJm8xdd01U_ftS4XlamLUbLJ7WlnilJtcftG8oC8si4mMuVZVOYldj29n6Fuo9U-THgsxP6KuaqDRL2pqVD6SEF5CCvDrDzOGregHpFP2-iGx2rKAYIZMNCCf5K7A2kdbr6d8NQJUaTdhpnpst3SGCb_6WE8BByqpqW-Fwf6TSdaCFHX9IuJIiRihSamtHbqEIx0DdTi83aDWt82-AjsW6z6LHp2zLC-26sdv_vH-ug8lM27dADmwM3IdkBD6F06HSB3TrNQQiNYmHeIFyJLbLFwV25ytiKc3lSFf0UofB5DsazXAudVc0fGWVrdJB7ehSIBvyZ4ETGYX1x2u8gFNkbaa3vF1k5XtOYjjvBXj5uDa4k7F2A",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 208\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}rest/api/categories/23/articles",
+							"host": [
+								"{{URL}}rest"
+							],
+							"path": [
+								"api",
+								"categories",
+								"23",
+								"articles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Existing Category",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Auth",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE1NzUzMjI1MjksInVzZXJuYW1lIjoiYWRtaW4iLCJleHAiOjE1NzUzMjYxMjl9.OEiYjv4qeCsh7TpWygk5xySaxzx5kVZnqEYML7Pw-j5OU_Tk_8jSuYIB9MZ7JbH1_UX0FkmrzNcWGqDPhsYKuOI5O2Jhg-OP_w3-nGLpqMf97Eanc1P1OaKj6YaCPePA9zbBN9NAtijA7u25KCY_oyISpSKnt1psrZnQPl42S-jgzmi_BhmOi_9J4rTEwalT_q5_8_WlVGtZLZW_hPedRkuUqbIVNmYAwPuye67udra_8-HmI-Dz_Gv1I7AtVu4GSSHoNCMJZhfeUMEKNGXwg2YLQKrYv6sfGc_i1eQGgyeqT9jWrLs7CjzKJJm8xdd01U_ftS4XlamLUbLJ7WlnilJtcftG8oC8si4mMuVZVOYldj29n6Fuo9U-THgsxP6KuaqDRL2pqVD6SEF5CCvDrDzOGregHpFP2-iGx2rKAYIZMNCCf5K7A2kdbr6d8NQJUaTdhpnpst3SGCb_6WE8BByqpqW-Fwf6TSdaCFHX9IuJIiRihSamtHbqEIx0DdTi83aDWt82-AjsW6z6LHp2zLC-26sdv_vH-ug8lM27dADmwM3IdkBD6F06HSB3TrNQQiNYmHeIFyJLbLFwV25ytiKc3lSFf0UofB5DsazXAudVc0fGWVrdJB7ehSIBvyZ4ETGYX1x2u8gFNkbaa3vF1k5XtOYjjvBXj5uDa4k7F2A",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"New Test Title\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}rest/api/categories/22",
+							"host": [
+								"{{URL}}rest"
+							],
+							"path": [
+								"api",
+								"categories",
+								"22"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Category (actually set `deleted_at`)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "XDEBUG_SESSION",
+								"value": "1",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{URL}}rest/api/categories/22",
+							"host": [
+								"{{URL}}rest"
+							],
+							"path": [
+								"api",
+								"categories",
+								"22"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Undelete Deleted Category",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Auth",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE1NzUzMjI1MjksInVzZXJuYW1lIjoiYWRtaW4iLCJleHAiOjE1NzUzMjYxMjl9.OEiYjv4qeCsh7TpWygk5xySaxzx5kVZnqEYML7Pw-j5OU_Tk_8jSuYIB9MZ7JbH1_UX0FkmrzNcWGqDPhsYKuOI5O2Jhg-OP_w3-nGLpqMf97Eanc1P1OaKj6YaCPePA9zbBN9NAtijA7u25KCY_oyISpSKnt1psrZnQPl42S-jgzmi_BhmOi_9J4rTEwalT_q5_8_WlVGtZLZW_hPedRkuUqbIVNmYAwPuye67udra_8-HmI-Dz_Gv1I7AtVu4GSSHoNCMJZhfeUMEKNGXwg2YLQKrYv6sfGc_i1eQGgyeqT9jWrLs7CjzKJJm8xdd01U_ftS4XlamLUbLJ7WlnilJtcftG8oC8si4mMuVZVOYldj29n6Fuo9U-THgsxP6KuaqDRL2pqVD6SEF5CCvDrDzOGregHpFP2-iGx2rKAYIZMNCCf5K7A2kdbr6d8NQJUaTdhpnpst3SGCb_6WE8BByqpqW-Fwf6TSdaCFHX9IuJIiRihSamtHbqEIx0DdTi83aDWt82-AjsW6z6LHp2zLC-26sdv_vH-ug8lM27dADmwM3IdkBD6F06HSB3TrNQQiNYmHeIFyJLbLFwV25ytiKc3lSFf0UofB5DsazXAudVc0fGWVrdJB7ehSIBvyZ4ETGYX1x2u8gFNkbaa3vF1k5XtOYjjvBXj5uDa4k7F2A",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"deleted_at\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}rest/api/categories/24",
+							"host": [
+								"{{URL}}rest"
+							],
+							"path": [
+								"api",
+								"categories",
+								"24"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "75fab657-9389-483b-813e-2c51fe29cd8c",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "0ff3c72e-a322-48cb-96bd-4569bf80cac4",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
